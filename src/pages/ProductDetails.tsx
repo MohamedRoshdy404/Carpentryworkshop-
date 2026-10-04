@@ -10,15 +10,27 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { ProductGallery } from "../components/products/ProductGallery";
 import { ProductPrice } from "../components/products/ProductPrice";
 import { WhatsAppButton } from "../components/whatsapp/WhatsAppButton";
-import { getProductBySlug } from "../services/productService";
 import { showToast } from "../utils/toast";
+import { useProductCatalog } from "../contexts/useProductCatalog";
 
 export function ProductDetailsPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
+  const { products, isLoading } = useProductCatalog();
 
-  const product = useMemo(() => getProductBySlug(slug ?? ""), [slug]);
+  const product = useMemo(
+    () => products.find((item) => item.slug === slug),
+    [products, slug],
+  );
+
+  if (isLoading && !product) {
+    return (
+      <div className="mx-auto max-w-5xl px-4 py-32 text-center text-stone-600" role="status">
+        جاري تحميل المنتج...
+      </div>
+    );
+  }
 
   if (!product) {
     return (

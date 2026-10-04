@@ -10,11 +10,12 @@ import { Link } from "react-router-dom";
 import { CategoryCard } from "../components/categories/CategoryCard";
 import { SectionTitle } from "../components/common/SectionTitle";
 import { ProductCard } from "../components/products/ProductCard";
-import { categories, products } from "../data/products";
+import { categories } from "../data/products";
 import { HOME_IMAGE } from "../config/siteConfig";
 import { openGeneralWhatsAppInquiry } from "../utils/whatsapp";
 import { SafeImage } from "../components/common/SafeImage";
 import { getOptimizedImageUrl } from "../utils/image";
+import { useProductCatalog } from "../contexts/useProductCatalog";
 
 const features = [
   {
@@ -35,7 +36,8 @@ const features = [
 ];
 
 export function HomePage() {
-  const featuredProducts = products
+  const { products: catalogProducts } = useProductCatalog();
+  const featuredProducts = catalogProducts
     .filter((product) => product.featured)
     .slice(0, 4);
 

@@ -11,8 +11,10 @@ import { SortDropdown } from "../components/common/SortDropdown";
 import { categories } from "../data/products";
 import type { ProductAvailability } from "../types/product";
 import { searchProducts } from "../services/productService";
+import { useProductCatalog } from "../contexts/useProductCatalog";
 
 export function ProductsPage() {
+  const { products, isLoading } = useProductCatalog();
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState("");
   const categoryFromUrl = searchParams.get("category");
@@ -28,13 +30,7 @@ export function ProductsPage() {
   );
   const [customizableOnly, setCustomizableOnly] = useState(false);
   const [featuredOnly, setFeaturedOnly] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => setIsLoading(false), 300);
-    return () => window.clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     if (!mobileFiltersOpen) return;
@@ -54,7 +50,7 @@ export function ProductsPage() {
   const categoryNames = categories.map((category) => category.name);
 
   const filteredProducts = useMemo(() => {
-    let list = searchProducts(query);
+    let list = searchProducts(query, products);
 
     if (selectedCategory !== "all") {
       list = list.filter((product) => product.category === selectedCategory);
@@ -100,6 +96,7 @@ export function ProductsPage() {
     featuredOnly,
     priceLimit,
     query,
+    products,
     selectedCategory,
     sortBy,
   ]);
