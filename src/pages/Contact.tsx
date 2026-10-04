@@ -30,7 +30,7 @@ export function ContactPage() {
               <h2 className="text-xl font-bold text-stone-900">اتصل بنا</h2>
             </div>
             <p className="mt-4 text-base text-stone-600">
-              {PHONE_NUMBER || "رقم الهاتف غير مُضاف بعد."}
+              {PHONE_NUMBER || "رقم الهاتف غير مضاف بعد."}
             </p>
             {PHONE_NUMBER ? (
               <a
@@ -49,7 +49,7 @@ export function ContactPage() {
               <h2 className="text-xl font-bold text-stone-900">واتساب</h2>
             </div>
             <p className="mt-4 text-base text-stone-600">
-              للاستفسار عن المنتجات والتصميمات الخاصّة
+              للاستفسار عن المنتجات والتصاميم الخاصة
             </p>
             <button
               type="button"
@@ -67,7 +67,7 @@ export function ContactPage() {
               <h2 className="text-xl font-bold text-stone-900">العنوان</h2>
             </div>
             <p className="mt-4 text-base text-stone-600">
-              {ADDRESS || "عنوان الورشة يُضاف بعد تزويدنا بالموقع الصحيح."}
+              {ADDRESS || "يُضاف عنوان الورشة بعد تأكيد موقعها."}
             </p>
             {GOOGLE_MAPS_URL ? (
               <a
@@ -88,7 +88,7 @@ export function ContactPage() {
               <h2 className="text-xl font-bold text-stone-900">أوقات العمل</h2>
             </div>
             <p className="mt-4 text-base text-stone-600">
-              {WORKING_HOURS || "مواعيد العمل تُضاف بعد تأكيدها من إدارة الورشة."}
+              {WORKING_HOURS || "سيُعلن عن مواعيد العمل قريبًا."}
             </p>
           </div>
         </div>
@@ -126,13 +126,13 @@ export function ContactPage() {
               className="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white px-4 py-2.5 text-sm font-semibold text-stone-700"
             >
               <Camera className="h-4 w-4" />
-              انستغرام
+              إنستغرام
             </a>
           ) : null}
         </div>
         {!FACEBOOK_URL && !INSTAGRAM_URL ? (
           <p className="mt-4 text-sm text-stone-600">
-            أضف روابط حسابات الورشة في إعدادات الموقع لعرضها هنا.
+            ستظهر روابط حسابات الورشة هنا عند إضافتها.
           </p>
         ) : null}
       </div>

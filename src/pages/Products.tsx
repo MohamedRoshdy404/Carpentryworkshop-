@@ -128,7 +128,7 @@ export function ProductsPage() {
         level={1}
         eyebrow="الكتالوج"
         title="منتجاتنا"
-        description="تصفح التصنيفات، ابحث عن القطعة المناسبة، وقارن بين الأسعار والخصومات بوضوح."
+        description="تصفّح التصنيفات، وابحث عن القطعة المناسبة، وقارن الأسعار والخصومات بوضوح."
       />
 
       <div className="mt-8 flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
@@ -143,7 +143,7 @@ export function ProductsPage() {
             className="inline-flex items-center justify-center gap-2 rounded-full border border-stone-300 bg-white px-4 py-3 text-sm font-medium text-stone-800 xl:hidden"
           >
             <SlidersHorizontal className="h-4 w-4" />
-            فلتر
+            تصفية
           </button>
         </div>
       </div>

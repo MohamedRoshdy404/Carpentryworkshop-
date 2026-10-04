@@ -23,9 +23,9 @@ export function ProductDetailsPage() {
   if (!product) {
     return (
       <div className="mx-auto max-w-5xl px-4 py-32 text-center">
-        <h1 className="text-4xl font-black text-stone-900">المنتج غير موجود</h1>
+        <h1 className="text-4xl font-black text-stone-900">المنتج غير متاح</h1>
         <p className="mt-3 text-stone-600">
-          المنتج الذي تحاول الوصول إليه غير موجود أو تم حذفه.
+          لم نعثر على المنتج الذي تبحث عنه؛ ربما حُذف أو تغيّر رابطه.
         </p>
         <button
           type="button"
@@ -212,8 +212,8 @@ export function ProductDetailsPage() {
             </div>
             <ul className="mt-5 space-y-3 text-sm leading-7 text-stone-600">
               <li>• التنفيذ حسب الطلب متاح في معظم المنتجات.</li>
-              <li>• الرسوم والتفاصيل مكتوبة بوضوح قبل التنفيذ.</li>
-              <li>• يتم متابعة الطلبات حتى التسليم.</li>
+              <li>• الأسعار والتفاصيل واضحة قبل بدء التنفيذ.</li>
+              <li>• نتابع الطلب حتى التسليم.</li>
             </ul>
           </div>
 
@@ -234,12 +234,12 @@ export function ProductDetailsPage() {
             <div className="flex items-center gap-3">
               <HeartHandshake className="h-5 w-5 text-[#0f766e]" />
               <h3 className="text-xl font-bold text-stone-900">
-                نود الاستفسار
+                للاستفسار
               </h3>
             </div>
             <p className="mt-4 text-sm leading-7 text-stone-600">
-              إذا كان لديك تفاصيل خاصة أو مقاسات مخصصة، تواصل معنا مباشرة عبر
-              واتساب وسيقوم فريقنا بإعطاءك السعر المناسب وتوقيت التنفيذ.
+              إذا كانت لديك تفاصيل خاصة أو مقاسات مخصصة، فتواصل معنا عبر واتساب
+              لمعرفة السعر وموعد التنفيذ.
             </p>
           </div>
         </aside>

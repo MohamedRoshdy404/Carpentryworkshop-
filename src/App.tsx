@@ -39,7 +39,7 @@ function RouteMetadata() {
     const product = productSlug ? getProductBySlug(productSlug) : undefined;
     const titles: Record<string, [string, string]> = {
       "/": [`الرئيسية | ${SITE_NAME}`, SITE_DESCRIPTION],
-      "/products": [`المنتجات | ${SITE_NAME}`, "تصفح منتجات الورشة وابحث حسب الفئة والسعر والخامات."],
+      "/products": [`المنتجات | ${SITE_NAME}`, "تصفّح منتجات الورشة وابحث حسب الفئة والسعر والخامات."],
       "/about": [`من نحن | ${SITE_NAME}`, "تعرف على أسلوب الورشة في تنفيذ الأثاث حسب الطلب."],
       "/contact": [`تواصل معنا | ${SITE_NAME}`, "تواصل مع الورشة للاستفسار عن المنتجات وتنفيذ الأثاث."],
     };

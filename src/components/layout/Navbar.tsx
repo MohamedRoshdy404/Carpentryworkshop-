@@ -21,7 +21,7 @@ export function Navbar() {
           <img
             src={`${import.meta.env.BASE_URL}brand-mark.svg`}
             alt=""
-            className="h-11 w-11 shrink-0"
+            className="h-12 w-12 shrink-0"
           />
           <div className="text-right">
             <p className="text-sm font-bold text-stone-900 sm:text-base">

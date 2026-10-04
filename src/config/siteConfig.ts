@@ -1,6 +1,6 @@
 export const SITE_NAME = "رشدى لنجارة الموبيليا";
 export const SITE_DESCRIPTION =
-  "رشدى لنجارة الموبيليا في سنورس، الفيوم. أثاث منزلي يُنفذ بعناية مع إمكانية تخصيص التصميم والمقاسات حسب الطلب.";
+  "رشدى لنجارة الموبيليا في سنورس، الفيوم. نصنع أثاثًا منزليًا بعناية وننفذ التصميمات والمقاسات حسب الطلب.";
 export const SITE_URL = "https://your-domain.example";
 export const WHATSAPP_NUMBER = "201006414243";
 export const PHONE_NUMBER = "01006414243";
@@ -10,7 +10,7 @@ export const FACEBOOK_URL = "";
 export const INSTAGRAM_URL = "";
 export const GOOGLE_MAPS_URL = "";
 export const BUSINESS_DETAILS_PLACEHOLDER =
-  "أضف رقم الهاتف وروابط التواصل في src/config/siteConfig.ts";
+  "تابعونا على وسائل التواصل الاجتماعي قريبًا.";
 
 export const HOME_IMAGE =
   "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80";

@@ -28,8 +28,8 @@ const features = [
   },
   {
     icon: ShieldCheck,
-    title: "مراقبة جودة",
-    description: "نراجع كل قطعة قبل التسليم للتأكد من الجودة والثبات.",
+    title: "جودة مضمونة",
+    description: "نراجع كل قطعة قبل التسليم للتأكد من جودة التصنيع وثباتها.",
   },
 ];
 
@@ -58,7 +58,7 @@ export function HomePage() {
                   to="/products"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-stone-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-stone-700"
                 >
-                  تصفح المنتجات
+                  تصفّح المنتجات
                   <ArrowLeft className="h-4 w-4" />
                 </Link>
                 <button
@@ -122,7 +122,7 @@ export function HomePage() {
         <SectionTitle
           eyebrow="لماذا نحن"
           title="اختيارك الآمن للديكور والراحة"
-          description="نحتفظ بمزيج يوازن بين أسلوبك الشخصي، جودة التنفيذ، وتسعير مناسب في السوق المحلي."
+          description="نوازن بين ذوقك الشخصي وجودة التنفيذ والأسعار المناسبة."
         />
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {features.map(({ icon: Icon, title, description }) => (
@@ -155,7 +155,7 @@ export function HomePage() {
                 عندك تصميم خاص؟
               </h2>
               <p className="mt-4 max-w-xl text-base leading-8 text-stone-300">
-                لو عندك تصميم معين أو مقاسات خاصة، نقدر ننفذه حسب طلبك.
+                أرسل إلينا تصميمك أو المقاسات المطلوبة، وسنعمل على تنفيذها حسب طلبك.
               </p>
             </div>
             <div className="flex items-center justify-center md:justify-end">
@@ -185,8 +185,8 @@ export function HomePage() {
               تصنيع يدوي بمواصفات دقيقة
             </h2>
             <p className="mt-4 text-base leading-8 text-stone-600">
-              نبدأ من فكرة المستخدم، ثم نؤطرها بتصميم عملي، ثم ننتجها من خلال
-              عمالة خبرية ومواد مناسبة للبيئة المنزلية والعملية.
+              نبدأ من فكرتك ونحوّلها إلى تصميم عملي، ثم ننفّذها بأيدٍ خبيرة
+              وخامات مناسبة للاستخدام المنزلي والعملي.
             </p>
             <div className="mt-6 flex items-center gap-3 text-stone-700">
               <CheckCircle2 className="h-5 w-5 text-[#0f766e]" />
@@ -216,10 +216,10 @@ export function HomePage() {
         <div className="rounded-[32px] bg-[#f4d4a8] p-8 text-center text-stone-900 md:p-12">
           <Sparkles className="mx-auto h-10 w-10" />
           <h2 className="mt-4 text-3xl font-bold">
-            جاهز تبدأ مشروعك مع أثاث مميز؟
+            هل أنت مستعد لبدء مشروعك مع أثاث مميز؟
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-base leading-8 text-stone-700">
-            تواصل معنا الآن لنتناقش الفكرة، المقاسات، والتصميم المناسب لبيتك أو
+            تواصل معنا الآن لنتناقش في الفكرة والمقاسات والتصميم المناسب لبيتك أو
             مشروعك.
           </p>
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
@@ -227,14 +227,14 @@ export function HomePage() {
               to="/products"
               className="inline-flex items-center justify-center rounded-full bg-stone-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-stone-700"
             >
-              شوف منتجاتنا
+              تصفّح منتجاتنا
             </Link>
             <button
               type="button"
               onClick={() => openGeneralWhatsAppInquiry()}
               className="inline-flex items-center justify-center rounded-full border border-stone-700 bg-white px-6 py-3 text-sm font-semibold text-stone-800 transition hover:bg-stone-100"
             >
-              استفسر على واتساب
+              استفسر عبر واتساب
             </button>
           </div>
         </div>

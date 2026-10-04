@@ -20,7 +20,7 @@ export function Footer() {
             <img
               src={`${import.meta.env.BASE_URL}brand-mark.svg`}
               alt=""
-              className="h-11 w-11 shrink-0"
+              className="h-12 w-12 shrink-0"
             />
             <div className="text-right">
               <p className="text-lg font-bold text-stone-900">{SITE_NAME}</p>
@@ -90,7 +90,7 @@ export function Footer() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="انستغرام"
+                aria-label="إنستغرام"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-300 bg-white text-stone-700"
               >
                 <Camera className="h-4 w-4" />

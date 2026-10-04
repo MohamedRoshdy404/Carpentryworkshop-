@@ -21,7 +21,7 @@ export const categories: Category[] = [
     name: "غرف سفرة",
     slug: "dining",
     image: CATEGORY_IMAGES.dining,
-    description: "طاولات وسراجات بتفاصيل فاخرة.",
+    description: "طاولات وكراسٍ بتفاصيل أنيقة.",
   },
   {
     id: "lobby",
@@ -46,7 +46,7 @@ export const categories: Category[] = [
   },
   {
     id: "bride",
-    name: "جهاز العرايس",
+    name: "جهاز العرائس",
     slug: "bride",
     image: CATEGORY_IMAGES.bride,
     description: "تصاميم فخمة حسب أذواق عملائنا.",
@@ -103,7 +103,7 @@ export const products: Product[] = [
     category: "غرف نوم",
     shortDescription: "لمسة فخمة تجمع بين الأصالة والراحة.",
     description:
-      "غرفة نوم كلاسكية بأسلوب فخم مع خامات مميزة وتفاصيل بارزة، مناسبة لمن يحب أجواء الاستقبال والهدوء.",
+      "غرفة نوم كلاسيكية بتصميم فخم وخامات مميزة وتفاصيل أنيقة، تناسب محبي الأصالة والهدوء.",
     price: 41000,
     oldPrice: 49000,
     discount: 16,
@@ -123,7 +123,7 @@ export const products: Product[] = [
     ],
     materials: ["خشب طبيعي", "ورنيش فاخر", "معدن مطلي"],
     dimensions: "ارتفاع 220 سم × عرض 200 سم × عمق 52 سم",
-    colors: ["قهوائي", "دخان", "أبيض فاخر"],
+    colors: ["بني قهوي", "رمادي دخاني", "أبيض"],
     availability: "custom",
     customizable: true,
     featured: true,
@@ -133,12 +133,12 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "غرفة أطفال أنيقة",
+    name: "غرفة أطفال مميزة",
     slug: "kids-room",
     category: "غرف أطفال",
     shortDescription: "مساحة مريحة وملونة لتنشئة الطفل.",
     description:
-      "غرفة أطفال عملية وملونة مع أرفف تخزين، وسرير مريح، وفريق تصميم يراعى سلامة الخامات وجودتها.",
+      "غرفة أطفال عملية وملونة تضم أرففًا للتخزين وسريرًا مريحًا، مع مراعاة سلامة الخامات وجودتها.",
     price: 28000,
     images: [
       {
@@ -156,20 +156,20 @@ export const products: Product[] = [
     ],
     materials: ["MDF", "طلاء مضاد للخدوش", "نسيج"],
     dimensions: "ارتفاع 210 سم × عرض 175 سم × عمق 48 سم",
-    colors: ["أبيض", "روبي", "أزرق"],
+    colors: ["أبيض", "أحمر", "أزرق"],
     availability: "available",
     customizable: true,
     featured: false,
     createdAt: "2025-03-05T08:30:00.000Z",
     estimatedTime: "12-18 يوم",
-    notes: "متوافق مع ألوان الجدار والديكور.",
+    notes: "يمكن تنسيق ألوان الغرفة مع ألوان الجدران والديكور.",
   },
   {
     id: 4,
     name: "طقم سفرة مودرن",
     slug: "modern-dining-set",
     category: "غرف سفرة",
-    shortDescription: "طاولة وسكرتيرة أنيقة للمناسبات اليومية.",
+    shortDescription: "طاولة وكراسٍ أنيقة للاستخدام اليومي.",
     description:
       "طقم سفرة عصري مصمم ليتناسب مع المساحات المتوسطة والكبيرة، مع تفاصيل خشبية فخمة وراحة في الاستخدام.",
     price: 24500,
@@ -191,7 +191,7 @@ export const products: Product[] = [
     ],
     materials: ["خشب", "قشرة", "زجاج"],
     dimensions: "طول 160 سم × عرض 90 سم × ارتفاع 76 سم",
-    colors: ["بيج", "ناتش", "أسود"],
+    colors: ["بيج", "خشبي طبيعي", "أسود"],
     availability: "available",
     customizable: true,
     featured: true,
@@ -239,7 +239,7 @@ export const products: Product[] = [
     category: "دواليب",
     shortDescription: "تخزين ذكي مع مظهر فاخر.",
     description:
-      "دولاب جرار واسع بمواصفات واسعة، خاصة لمن يعشق التنظيم مع لمسة جمالية داخل غرف النوم أو الممرات.",
+      "دولاب جرار واسع يوفر مساحة تخزين عملية، ويضيف لمسة أنيقة إلى غرف النوم أو الممرات.",
     price: 38000,
     oldPrice: 44000,
     discount: 14,
@@ -250,7 +250,7 @@ export const products: Product[] = [
       },
       {
         src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        alt: "دولاب داخلية",
+        alt: "دولاب من الداخل",
       },
       {
         src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
@@ -259,7 +259,7 @@ export const products: Product[] = [
     ],
     materials: ["خشب MDF", "قشرة خشبية", "معدن"],
     dimensions: "طول 240 سم × عمق 60 سم × ارتفاع 230 سم",
-    colors: ["أسود", "بني", "شاي"],
+    colors: ["أسود", "بني", "بني فاتح"],
     availability: "custom",
     customizable: true,
     featured: true,
@@ -298,13 +298,13 @@ export const products: Product[] = [
     featured: false,
     createdAt: "2025-05-30T08:00:00.000Z",
     estimatedTime: "7-12 يوم",
-    notes: "متاح بصور وأبعاد مختلفة.",
+    notes: "يمكن تنفيذه بأبعاد وألوان مختلفة.",
   },
   {
     id: 8,
     name: "جزامة مودرن",
     slug: "modern-sideboard",
-    category: "جهاز العرايس",
+    category: "جهاز العرائس",
     shortDescription: "قطعة أساسية للغرف أو الاستقبال.",
     description:
       "جزامة بجوانب أنيقة ومداخل واسعة، مناسبة للديكور الداخلي ومكتملة بالتفاصيل التي تزيد الهدوء والجمال.",
@@ -323,7 +323,7 @@ export const products: Product[] = [
         alt: "جزامة زاوية",
       },
     ],
-    materials: ["ألواح خشبية", "قشرة", "رمال"],
+    materials: ["ألواح خشبية", "قشرة خشبية", "مقابض معدنية"],
     dimensions: "طول 180 سم × عمق 50 سم × ارتفاع 95 سم",
     colors: ["بني فاتح", "مائل للنحاس", "أبيض"],
     availability: "available",
@@ -338,7 +338,7 @@ export const products: Product[] = [
     name: "ترابيزة سفرة كلاسيك",
     slug: "classic-dining-table",
     category: "غرف سفرة",
-    shortDescription: "ترابيزة فاخرة بتصميم كلاسيكي.",
+    shortDescription: "طاولة سفرة فاخرة بتصميم كلاسيكي.",
     description:
       "ترابيزة سفرة عائلية بمظهر فاخر وآمن، ملائمة للمنازل الكبيرة والأجواء العائلية.",
     price: 19000,
@@ -375,7 +375,7 @@ export const products: Product[] = [
     category: "أنتريهات",
     shortDescription: "وحدة متكاملة للأنظمة الحديثة.",
     description:
-      "وحدة تلفزيون بأبعاد متوازنة، تركيب داخلي مناسب، وواجهة فاخرة تضيف منظورا للغرفة المعيشة.",
+      "وحدة تلفزيون بأبعاد متوازنة ومساحات تخزين عملية، تضيف لمسة أنيقة إلى غرفة المعيشة.",
     price: 22500,
     images: [
       {
@@ -393,7 +393,7 @@ export const products: Product[] = [
     ],
     materials: ["خشب MDF", "قشرة", "معدن"],
     dimensions: "طول 200 سم × عمق 45 سم × ارتفاع 60 سم",
-    colors: ["بني", "أسود", "دخان"],
+    colors: ["بني", "أسود", "رمادي دخاني"],
     availability: "custom",
     customizable: true,
     featured: false,
@@ -408,7 +408,7 @@ export const products: Product[] = [
     category: "حسب الطلب",
     shortDescription: "تصميم خاص يناسب كل مساحة وذوق.",
     description:
-      "تصلح للغرف بأبعاد مختلفة، مع خيارات في الخامات، الألوان، والديكور حسب احتياج العميل.",
+      "تناسب الغرف بمقاسات مختلفة، مع خيارات متنوعة من الخامات والألوان والتصميمات حسب احتياجات العميل.",
     price: 47000,
     images: [
       {
@@ -436,23 +436,23 @@ export const products: Product[] = [
   },
   {
     id: 12,
-    name: "طقم جهاز عرايس فخم",
+    name: "طقم جهاز عرائس فاخر",
     slug: "bridal-furniture-set",
-    category: "جهاز العرايس",
+    category: "جهاز العرائس",
     shortDescription: "تجهيز كامل بأسلوب فخم ومميز.",
     description:
-      "طقم جهاز عرايس مصمم بتفاصيل راقية، يحقق التوازن بين الفخامة والوظيفية في غرفة النوم.",
+      "طقم جهاز عرائس بتفاصيل راقية، يجمع بين الفخامة والعملية في غرفة النوم.",
     price: 61000,
     oldPrice: 70000,
     discount: 13,
     images: [
       {
         src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
-        alt: "طقم جهاز عرايس",
+        alt: "طقم جهاز عرائس",
       },
       {
         src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
-        alt: "جهاز عرايس تفاصيل",
+        alt: "تفاصيل جهاز العرائس",
       },
       {
         src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
