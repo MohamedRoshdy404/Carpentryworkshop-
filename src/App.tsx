@@ -5,12 +5,10 @@ import { Footer } from "./components/layout/Footer";
 import { Navbar } from "./components/layout/Navbar";
 import { FloatingWhatsApp } from "./components/whatsapp/FloatingWhatsApp";
 import { SITE_DESCRIPTION, SITE_NAME } from "./config/siteConfig";
+import { HomePage } from "./pages/Home";
 import { getProductBySlug } from "./services/productService";
 import { updateMetaTags } from "./utils/seo";
 
-const HomePage = lazy(() =>
-  import("./pages/Home").then((module) => ({ default: module.HomePage })),
-);
 const ProductsPage = lazy(() =>
   import("./pages/Products").then((module) => ({ default: module.ProductsPage })),
 );

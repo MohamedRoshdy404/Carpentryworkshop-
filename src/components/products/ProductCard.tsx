@@ -29,6 +29,7 @@ export function ProductCard({ product }: ProductCardProps) {
           alt={product.images[0]?.alt ?? product.name}
           className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
           loading="lazy"
+          fetchPriority="low"
           decoding="async"
         />
         <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-stone-700 backdrop-blur-sm">
