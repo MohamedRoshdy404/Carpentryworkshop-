@@ -3,7 +3,7 @@ export const SITE_DESCRIPTION =
   "رشدى لنجارة الموبيليا في سنورس، الفيوم. أثاث منزلي يُنفذ بعناية مع إمكانية تخصيص التصميم والمقاسات حسب الطلب.";
 export const SITE_URL = "https://your-domain.example";
 export const WHATSAPP_NUMBER = "201006414243";
-export const PHONE_NUMBER = "";
+export const PHONE_NUMBER = "01006414243";
 export const ADDRESS = "مصر - الفيوم - م سنورس";
 export const WORKING_HOURS = "";
 export const FACEBOOK_URL = "";

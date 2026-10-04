@@ -60,7 +60,14 @@ export function Footer() {
               <MapPin className="h-4 w-4" /> {ADDRESS || "العنوان غير متاح"}
             </li>
             <li className="flex items-center justify-end gap-2">
-              <Phone className="h-4 w-4" /> {PHONE_NUMBER || "رقم الهاتف يُضاف لاحقًا"}
+              <Phone className="h-4 w-4" />
+              {PHONE_NUMBER ? (
+                <a href={`tel:${PHONE_NUMBER}`} dir="ltr">
+                  {PHONE_NUMBER}
+                </a>
+              ) : (
+                "رقم الهاتف يُضاف لاحقًا"
+              )}
             </li>
             <li className="flex items-center justify-end gap-2">
               <MessageCircle className="h-4 w-4" /> واتساب
