@@ -18,13 +18,17 @@ export function Navbar() {
     <header className="sticky top-0 z-30 border-b border-stone-200/80 bg-[#f7f1ea]/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-stone-900 text-lg font-bold text-[#f7f1ea]">
-            و
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}brand-mark.svg`}
+            alt=""
+            className="h-11 w-11 shrink-0"
+          />
           <div className="text-right">
-            <p className="text-lg font-bold text-stone-900">{SITE_NAME}</p>
+            <p className="text-sm font-bold text-stone-900 sm:text-base">
+              {SITE_NAME}
+            </p>
             <p className="text-xs text-stone-500">
-              أثاث يُنفذ حسب الطلب
+              أثاث خشبي حسب الطلب
             </p>
           </div>
         </Link>

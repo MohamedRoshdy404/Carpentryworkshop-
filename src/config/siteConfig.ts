@@ -1,16 +1,16 @@
-export const SITE_NAME = "ورشة النجارة";
+export const SITE_NAME = "رشدى لنجارة الموبيليا";
 export const SITE_DESCRIPTION =
-  "أثاث منزلي يُنفذ بعناية، مع إمكانية تخصيص التصميم والمقاسات حسب الطلب.";
+  "رشدى لنجارة الموبيليا في سنورس، الفيوم. أثاث منزلي يُنفذ بعناية مع إمكانية تخصيص التصميم والمقاسات حسب الطلب.";
 export const SITE_URL = "https://your-domain.example";
 export const WHATSAPP_NUMBER = "201006414243";
 export const PHONE_NUMBER = "";
-export const ADDRESS = "";
+export const ADDRESS = "مصر - الفيوم - م سنورس";
 export const WORKING_HOURS = "";
 export const FACEBOOK_URL = "";
 export const INSTAGRAM_URL = "";
 export const GOOGLE_MAPS_URL = "";
 export const BUSINESS_DETAILS_PLACEHOLDER =
-  "أضف بيانات الورشة الحقيقية في src/config/siteConfig.ts";
+  "أضف رقم الهاتف وروابط التواصل في src/config/siteConfig.ts";
 
 export const HOME_IMAGE =
   "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80";
