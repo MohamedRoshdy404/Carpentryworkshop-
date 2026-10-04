@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="صورة أثاث مؤقتة">
+  <rect width="1200" height="800" fill="#eee6dc"/>
+  <path d="M0 560h1200v240H0z" fill="#d8c7b2"/>
+  <path d="M270 470h660v180H270z" rx="24" fill="#8b735e"/>
+  <path d="M310 390h580v125H310z" rx="24" fill="#a88d72"/>
+  <path d="M330 640v75m540-75v75" stroke="#594637" stroke-width="24" stroke-linecap="round"/>
+  <text x="600" y="755" fill="#594637" font-family="sans-serif" font-size="28" text-anchor="middle">صورة المنتج تُضاف من إعدادات المشروع</text>
+</svg>

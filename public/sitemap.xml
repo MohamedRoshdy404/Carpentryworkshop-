@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://your-domain.example/</loc></url>
+  <url><loc>https://your-domain.example/products</loc></url>
+  <url><loc>https://your-domain.example/products/modern-bedroom</loc></url>
+  <url><loc>https://your-domain.example/products/classic-bedroom</loc></url>
+  <url><loc>https://your-domain.example/products/kids-room</loc></url>
+  <url><loc>https://your-domain.example/products/modern-dining-set</loc></url>
+  <url><loc>https://your-domain.example/products/modern-entertainment-unit</loc></url>
+  <url><loc>https://your-domain.example/products/luxury-wardrobe</loc></url>
+  <url><loc>https://your-domain.example/products/home-office</loc></url>
+  <url><loc>https://your-domain.example/products/modern-sideboard</loc></url>
+  <url><loc>https://your-domain.example/products/classic-dining-table</loc></url>
+  <url><loc>https://your-domain.example/products/tv-unit-modern</loc></url>
+  <url><loc>https://your-domain.example/products/custom-bedroom</loc></url>
+  <url><loc>https://your-domain.example/products/bridal-furniture-set</loc></url>
+  <url><loc>https://your-domain.example/about</loc></url>
+  <url><loc>https://your-domain.example/contact</loc></url>
+</urlset>
