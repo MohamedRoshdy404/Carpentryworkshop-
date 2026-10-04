@@ -74,7 +74,7 @@ export function HomePage() {
 
             <div className="relative min-h-[360px] overflow-hidden rounded-[28px]">
               <SafeImage
-                src={getOptimizedImageUrl(HOME_IMAGE, 900, 65)}
+                src={getOptimizedImageUrl(HOME_IMAGE, 800, 50)}
                 alt="أثاث منزلي فخم"
                 className="h-full w-full object-cover"
                 fetchPriority="high"

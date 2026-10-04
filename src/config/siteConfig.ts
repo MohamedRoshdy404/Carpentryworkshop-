@@ -13,7 +13,7 @@ export const BUSINESS_DETAILS_PLACEHOLDER =
   "تابعونا على وسائل التواصل الاجتماعي قريبًا.";
 
 export const HOME_IMAGE =
-  "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=65";
+  "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=50";
 
 export const CATEGORY_IMAGES = {
   bedroom:
