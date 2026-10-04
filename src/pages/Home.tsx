@@ -14,6 +14,7 @@ import { categories, products } from "../data/products";
 import { HOME_IMAGE } from "../config/siteConfig";
 import { openGeneralWhatsAppInquiry } from "../utils/whatsapp";
 import { SafeImage } from "../components/common/SafeImage";
+import { getOptimizedImageUrl } from "../utils/image";
 
 const features = [
   {
@@ -73,10 +74,11 @@ export function HomePage() {
 
             <div className="relative min-h-[360px] overflow-hidden rounded-[28px]">
               <SafeImage
-                src={HOME_IMAGE}
+                src={getOptimizedImageUrl(HOME_IMAGE, 900, 65)}
                 alt="أثاث منزلي فخم"
                 className="h-full w-full object-cover"
                 fetchPriority="high"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-900/20 to-transparent" />
               <div className="absolute bottom-5 right-5 rounded-[20px] bg-white/90 px-4 py-3 text-right backdrop-blur-sm">
@@ -203,10 +205,12 @@ export function HomePage() {
           </div>
 
           <div className="overflow-hidden rounded-[28px]">
-            <img
-              src={HOME_IMAGE}
+            <SafeImage
+              src={getOptimizedImageUrl(HOME_IMAGE, 800, 60)}
               alt="خزانة وتصنيع أثاث يدوي"
               className="h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>

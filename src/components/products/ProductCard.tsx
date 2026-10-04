@@ -1,6 +1,7 @@
 import { ArrowLeft, CheckCircle2, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { Product } from "../../types/product";
+import { getOptimizedImageUrl } from "../../utils/image";
 import { openWhatsApp } from "../../utils/whatsapp";
 import { SafeImage } from "../common/SafeImage";
 import { ProductPrice } from "./ProductPrice";
@@ -20,10 +21,15 @@ export function ProductCard({ product }: ProductCardProps) {
     <article className="group overflow-hidden rounded-[28px] border border-stone-200 bg-white shadow-[0_12px_30px_-18px_rgba(28,25,23,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_40px_-20px_rgba(28,25,23,0.28)]">
       <div className="relative overflow-hidden">
         <SafeImage
-          src={product.images[0]?.src}
+          src={
+            product.images[0]?.src
+              ? getOptimizedImageUrl(product.images[0].src, 640, 60)
+              : undefined
+          }
           alt={product.images[0]?.alt ?? product.name}
           className="h-72 w-full object-cover transition duration-500 group-hover:scale-105"
           loading="lazy"
+          decoding="async"
         />
         <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-stone-700 backdrop-blur-sm">
           {product.category}

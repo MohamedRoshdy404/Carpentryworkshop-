@@ -1,6 +1,7 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { Category } from "../../types/product";
+import { getOptimizedImageUrl } from "../../utils/image";
 import { SafeImage } from "../common/SafeImage";
 
 type CategoryCardProps = {
@@ -15,10 +16,11 @@ export function CategoryCard({ category }: CategoryCardProps) {
     >
       <div className="relative">
         <SafeImage
-          src={category.image}
+          src={getOptimizedImageUrl(category.image, 640, 60)}
           alt={category.name}
           className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
           loading="lazy"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 p-5 text-right text-white">

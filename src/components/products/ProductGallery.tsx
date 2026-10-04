@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Product } from "../../types/product";
+import { getOptimizedImageUrl } from "../../utils/image";
 import { SafeImage } from "../common/SafeImage";
 
 type ProductGalleryProps = {
@@ -13,9 +14,11 @@ export function ProductGallery({ product }: ProductGalleryProps) {
     <div className="space-y-4">
       <div className="overflow-hidden rounded-[28px] border border-stone-200 bg-white p-2 shadow-sm">
         <SafeImage
-          src={activeImage}
+          src={getOptimizedImageUrl(activeImage, 960, 65)}
           alt={product.name}
           className="h-[420px] w-full rounded-[20px] object-cover"
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
       <div className="grid grid-cols-3 gap-3">
@@ -29,10 +32,11 @@ export function ProductGallery({ product }: ProductGalleryProps) {
             aria-pressed={activeImage === image.src}
           >
             <SafeImage
-              src={image.src}
+              src={getOptimizedImageUrl(image.src, 320, 55)}
               alt={image.alt}
               className="h-24 w-full rounded-xl object-cover"
               loading="lazy"
+              decoding="async"
             />
           </button>
         ))}
