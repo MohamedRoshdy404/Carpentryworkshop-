@@ -1,3 +1,5 @@
+import { getLocalStockImageUrl } from "../utils/image";
+
 export const SITE_NAME = "رشدى لنجارة الموبيليا";
 export const SITE_DESCRIPTION =
   "رشدى لنجارة الموبيليا في سنورس، الفيوم. نصنع أثاثًا منزليًا بعناية وننفذ التصميمات والمقاسات حسب الطلب.";
@@ -16,19 +18,12 @@ export const HOME_IMAGE =
   "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=50";
 
 export const CATEGORY_IMAGES = {
-  bedroom:
-    "https://images.pexels.com/photos/7614412/pexels-photo-7614412.jpeg?auto=compress&cs=tinysrgb&w=900",
-  kids: "https://images.pexels.com/photos/36777929/pexels-photo-36777929.jpeg?auto=compress&cs=tinysrgb&w=900",
-  dining:
-    "https://images.pexels.com/photos/7180275/pexels-photo-7180275.jpeg?auto=compress&cs=tinysrgb&w=900",
-  lobby:
-    "https://images.pexels.com/photos/31338029/pexels-photo-31338029.jpeg?auto=compress&cs=tinysrgb&w=900",
-  storage:
-    "https://images.pexels.com/photos/6585750/pexels-photo-6585750.jpeg?auto=compress&cs=tinysrgb&w=900",
-  office:
-    "https://images.pexels.com/photos/31726545/pexels-photo-31726545.jpeg?auto=compress&cs=tinysrgb&w=900",
-  bride:
-    "https://images.pexels.com/photos/8141958/pexels-photo-8141958.jpeg?auto=compress&cs=tinysrgb&w=900",
-  custom:
-    "https://images.pexels.com/photos/7533842/pexels-photo-7533842.jpeg?auto=compress&cs=tinysrgb&w=900",
+  bedroom: getLocalStockImageUrl("7614412"),
+  kids: getLocalStockImageUrl("36777929"),
+  dining: getLocalStockImageUrl("7180275"),
+  lobby: getLocalStockImageUrl("31338029"),
+  storage: getLocalStockImageUrl("6585750"),
+  office: getLocalStockImageUrl("31726545"),
+  bride: getLocalStockImageUrl("8141958"),
+  custom: getLocalStockImageUrl("7533842"),
 };
