@@ -1,5 +1,26 @@
-import type { Category, Product } from "../types/product";
+import type { Category, Product, ProductImage } from "../types/product";
 import { CATEGORY_IMAGES } from "../config/siteConfig";
+
+const productImage = (photoId: string, alt: string): ProductImage => ({
+  src: `https://images.unsplash.com/${photoId}?auto=format&fit=crop&w=1200&q=80`,
+  alt,
+});
+
+const pexelsImage = (
+  photoId: string,
+  alt: string,
+  extension: "jpeg" | "png" = "jpeg",
+): ProductImage => ({
+  src: `https://images.pexels.com/photos/${photoId}/pexels-photo-${photoId}.${extension}?auto=compress&cs=tinysrgb&w=1200`,
+  alt,
+});
+
+export const normalizeProductCategory = (category: string): string =>
+  category === "أنتريهات"
+    ? "غرف معيشة"
+    : category === "دواليب"
+      ? "دواليب ووحدات تخزين"
+      : category;
 
 export const categories: Category[] = [
   {
@@ -25,14 +46,14 @@ export const categories: Category[] = [
   },
   {
     id: "lobby",
-    name: "أنتريهات",
+    name: "غرف معيشة",
     slug: "lobby",
     image: CATEGORY_IMAGES.lobby,
-    description: "حلول تخزين عصرية بلمسة فاخرة.",
+    description: "أثاث عملي وأنيق يجمع الأسرة في غرفة المعيشة.",
   },
   {
     id: "storage",
-    name: "دواليب",
+    name: "دواليب ووحدات تخزين",
     slug: "storage",
     image: CATEGORY_IMAGES.storage,
     description: "قطع تخزين عملية بجودة عالية.",
@@ -73,18 +94,8 @@ export const products: Product[] = [
     oldPrice: 42000,
     discount: 17,
     images: [
-      {
-        src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-        alt: "غرفة نوم مودرن",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        alt: "غرفة نوم تفاصيل",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80",
-        alt: "غرفة نوم زاوية",
-      },
+      productImage("photo-1505693416388-ac5ce068fe85", "غرفة نوم مودرن بسرير وتفاصيل خشبية"),
+      pexelsImage("8082562", "غرفة نوم عصرية بسرير وإضاءة هادئة"),
     ],
     materials: ["خشب MDF", "قشرة طبيعية", "معدن"],
     dimensions: "ارتفاع 220 سم × عرض 185 سم × عمق 50 سم",
@@ -108,18 +119,8 @@ export const products: Product[] = [
     oldPrice: 49000,
     discount: 16,
     images: [
-      {
-        src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
-        alt: "غرفة نوم كلاسيك",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
-        alt: "غرفة نوم كلاسيك داخلية",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        alt: "تفاصيل غرفة نوم",
-      },
+      productImage("photo-1617104678098-de229db51175", "غرفة نوم كلاسيك بسرير خشبي"),
+      pexelsImage("8141962", "غرفة نوم بخزائن خشبية وديكور كلاسيكي"),
     ],
     materials: ["خشب طبيعي", "ورنيش فاخر", "معدن مطلي"],
     dimensions: "ارتفاع 220 سم × عرض 200 سم × عمق 52 سم",
@@ -141,18 +142,8 @@ export const products: Product[] = [
       "غرفة أطفال عملية وملونة تضم أرففًا للتخزين وسريرًا مريحًا، مع مراعاة سلامة الخامات وجودتها.",
     price: 28000,
     images: [
-      {
-        src: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
-        alt: "غرفة أطفال",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        alt: "غرفة أطفال من الداخل",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
-        alt: "غرفة أطفال زاوية",
-      },
+      pexelsImage("7587803", "غرفة أطفال عصرية بأثاث أخضر ومساحة لعب"),
+      pexelsImage("6835137", "غرفة أطفال بسرير وأثاث مناسب للصغار"),
     ],
     materials: ["MDF", "طلاء مضاد للخدوش", "نسيج"],
     dimensions: "ارتفاع 210 سم × عرض 175 سم × عمق 48 سم",
@@ -176,18 +167,8 @@ export const products: Product[] = [
     oldPrice: 29000,
     discount: 15,
     images: [
-      {
-        src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
-        alt: "طقم سفرة مودرن",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80",
-        alt: "طاولة سفرة",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        alt: "غرفة سفرة",
-      },
+      productImage("photo-1617806118233-18e1de247200", "طاولة سفرة مودرن مع كراسي"),
+      pexelsImage("7614546", "طاولة سفرة وكراسٍ بتصميم عصري"),
     ],
     materials: ["خشب", "قشرة", "زجاج"],
     dimensions: "طول 160 سم × عرض 90 سم × ارتفاع 76 سم",
@@ -201,26 +182,16 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    name: "أنتريه مودرن",
+    name: "وحدة تخزين مودرن",
     slug: "modern-entertainment-unit",
-    category: "أنتريهات",
-    shortDescription: "وحدة تخزين عصرية ومكتبية.",
+    category: "غرف معيشة",
+    shortDescription: "وحدة تخزين عصرية بتصميم عملي.",
     description:
-      "أنتريه أنيق بتصميم عملي مزود بأرفف داخلية وكابينة تخزين، يضيف لمسة فخمة لأي ركن في المنزل.",
+      "وحدة تخزين عصرية بأرفف ومساحة عملية، تناسب غرفة المعيشة وتساعد على تنظيم الأغراض اليومية.",
     price: 32000,
     images: [
-      {
-        src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
-        alt: "أنتريه",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80",
-        alt: "تفاصيل أنتريه",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        alt: "أنتريه مودرن",
-      },
+      productImage("photo-1513694203232-719a280e022f", "وحدة تخزين خشبية في غرفة معيشة"),
+      productImage("photo-1615874694520-474822394e73", "وحدة رفوف وخزائن في غرفة المعيشة"),
     ],
     materials: ["MDF", "معدن", "خشب طبقي"],
     dimensions: "طول 230 سم × عمق 42 سم × ارتفاع 84 سم",
@@ -236,7 +207,7 @@ export const products: Product[] = [
     id: 6,
     name: "دولاب جرار فخم",
     slug: "luxury-wardrobe",
-    category: "دواليب",
+    category: "دواليب ووحدات تخزين",
     shortDescription: "تخزين ذكي مع مظهر فاخر.",
     description:
       "دولاب جرار واسع يوفر مساحة تخزين عملية، ويضيف لمسة أنيقة إلى غرف النوم أو الممرات.",
@@ -244,18 +215,8 @@ export const products: Product[] = [
     oldPrice: 44000,
     discount: 14,
     images: [
-      {
-        src: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
-        alt: "دولاب جرار",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        alt: "دولاب من الداخل",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
-        alt: "دولاب بجوانب",
-      },
+      pexelsImage("32331030", "دولاب ملابس مودرن بتصميم بسيط", "png"),
+      productImage("photo-1595428774223-ef52624120d2", "خزانة خشبية بأرفف تخزين داخلية"),
     ],
     materials: ["خشب MDF", "قشرة خشبية", "معدن"],
     dimensions: "طول 240 سم × عمق 60 سم × ارتفاع 230 سم",
@@ -277,18 +238,8 @@ export const products: Product[] = [
       "مكتب منزلي مصمم لتحقيق الراحة والنظام مع لمسة عصرية للنشاط، مناسب للمنازل الحديثة ومكاتب العمل من المنزل.",
     price: 21000,
     images: [
-      {
-        src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
-        alt: "مكتب منزلي",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
-        alt: "مكتب تفاصيل",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        alt: "منطقة مكتب",
-      },
+      productImage("photo-1497366754035-f200968a6e72", "مساحة عمل ومكتب بتصميم عصري"),
+      pexelsImage("36123565", "مكتب منزلي خشبي مع حاسوب وكتب"),
     ],
     materials: ["خشب", "معدن", "مادة مضادة للخدوش"],
     dimensions: "طول 140 سم × عمق 55 سم × ارتفاع 78 سم",
@@ -304,24 +255,14 @@ export const products: Product[] = [
     id: 8,
     name: "جزامة مودرن",
     slug: "modern-sideboard",
-    category: "جهاز العرائس",
-    shortDescription: "قطعة أساسية للغرف أو الاستقبال.",
+    category: "دواليب ووحدات تخزين",
+    shortDescription: "جزامة عملية لترتيب الأحذية في المدخل.",
     description:
-      "جزامة بجوانب أنيقة ومداخل واسعة، مناسبة للديكور الداخلي ومكتملة بالتفاصيل التي تزيد الهدوء والجمال.",
+      "جزامة خشبية بأرفف ومساحة تخزين منظمة، تساعد على ترتيب الأحذية وتناسب المداخل والممرات.",
     price: 26000,
     images: [
-      {
-        src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
-        alt: "جزامة مودرن",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        alt: "مجسم جزامة",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
-        alt: "جزامة زاوية",
-      },
+      pexelsImage("7061417", "جزامة ومقعد خشبيان في مدخل المنزل"),
+      pexelsImage("32761387", "رف أحذية خشبي للتخزين المنظم"),
     ],
     materials: ["ألواح خشبية", "قشرة خشبية", "مقابض معدنية"],
     dimensions: "طول 180 سم × عمق 50 سم × ارتفاع 95 سم",
@@ -345,18 +286,8 @@ export const products: Product[] = [
     oldPrice: 24000,
     discount: 21,
     images: [
-      {
-        src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1200&q=80",
-        alt: "ترابيزة سفرة",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80",
-        alt: "ترابيزة تفاصيل",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
-        alt: "غرفة طعام",
-      },
+      pexelsImage("5998031", "غرفة سفرة كلاسيكية بطاولة وكراسٍ خشبية"),
+      pexelsImage("11295880", "طاولة سفرة خشبية مجهزة لتناول الطعام"),
     ],
     materials: ["خشب طبيعي", "معدن", "لُكَّة عالية الجودة"],
     dimensions: "طول 150 سم × عرض 80 سم × ارتفاع 75 سم",
@@ -372,24 +303,14 @@ export const products: Product[] = [
     id: 10,
     name: "وحدة تلفزيون عصرية",
     slug: "tv-unit-modern",
-    category: "أنتريهات",
+    category: "غرف معيشة",
     shortDescription: "وحدة متكاملة للأنظمة الحديثة.",
     description:
       "وحدة تلفزيون بأبعاد متوازنة ومساحات تخزين عملية، تضيف لمسة أنيقة إلى غرفة المعيشة.",
     price: 22500,
     images: [
-      {
-        src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
-        alt: "وحدة تلفزيون",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80",
-        alt: "عرض وحدة التلفزيون",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        alt: "استخدام الوحدة",
-      },
+      pexelsImage("5755711", "شاشة تلفزيون فوق وحدة خشبية"),
+      pexelsImage("7546231", "تلفزيون على وحدة تخزين في غرفة المعيشة"),
     ],
     materials: ["خشب MDF", "قشرة", "معدن"],
     dimensions: "طول 200 سم × عمق 45 سم × ارتفاع 60 سم",
@@ -411,18 +332,8 @@ export const products: Product[] = [
       "تناسب الغرف بمقاسات مختلفة، مع خيارات متنوعة من الخامات والألوان والتصميمات حسب احتياجات العميل.",
     price: 47000,
     images: [
-      {
-        src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-        alt: "غرفة نوم حسب الطلب",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
-        alt: "غرفة حسب الطلب",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80",
-        alt: "تصميم غرفة حسب الطلب",
-      },
+      productImage("photo-1616486029423-aaa4789e8c9a", "غرفة نوم بتصميم هادئ قابل للتخصيص"),
+      pexelsImage("7535012", "غرفة نوم مع دولاب مدمج وأثاث خشبي"),
     ],
     materials: ["خشب", "قشرة", "معدن"],
     dimensions: "يتم تحديدها حسب المقاسات",
@@ -446,18 +357,8 @@ export const products: Product[] = [
     oldPrice: 70000,
     discount: 13,
     images: [
-      {
-        src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
-        alt: "طقم جهاز عرائس",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
-        alt: "تفاصيل جهاز العرائس",
-      },
-      {
-        src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        alt: "تصميم فخم",
-      },
+      pexelsImage("7546276", "سرير غرفة نوم بتنجيد أنيق ولوح رأس خشبي"),
+      pexelsImage("6934170", "غرفة نوم فاخرة بسرير وخزائن جانبية"),
     ],
     materials: ["خشب طبيعي", "قشرة فاخرة", "نجارة يدوية"],
     dimensions: "حسب تصميم الطقم المختار",

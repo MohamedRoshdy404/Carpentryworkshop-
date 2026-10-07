@@ -5,7 +5,10 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { products as localProducts } from "../data/products";
+import {
+  normalizeProductCategory,
+  products as localProducts,
+} from "../data/products";
 import { fetchAdditionalProducts } from "../services/productService";
 import type { Product } from "../types/product";
 import { ProductCatalogContext } from "./ProductCatalogContext";
@@ -61,7 +64,12 @@ export function ProductCatalogProvider({ children }: { children: ReactNode }) {
 
   const products = useMemo(() => {
     const bySlug = new Map(localProducts.map((product) => [product.slug, product]));
-    for (const product of remoteProducts) bySlug.set(product.slug, product);
+    for (const product of remoteProducts) {
+      bySlug.set(product.slug, {
+        ...product,
+        category: normalizeProductCategory(product.category),
+      });
+    }
     return [...bySlug.values()];
   }, [remoteProducts]);
 

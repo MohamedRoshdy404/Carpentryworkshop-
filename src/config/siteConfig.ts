@@ -13,22 +13,22 @@ export const BUSINESS_DETAILS_PLACEHOLDER =
   "تابعونا على وسائل التواصل الاجتماعي قريبًا.";
 
 export const HOME_IMAGE =
-  "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=50";
+  "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=50";
 
 export const CATEGORY_IMAGES = {
   bedroom:
-    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-  kids: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80",
+    "https://images.pexels.com/photos/7614412/pexels-photo-7614412.jpeg?auto=compress&cs=tinysrgb&w=900",
+  kids: "https://images.pexels.com/photos/36777929/pexels-photo-36777929.jpeg?auto=compress&cs=tinysrgb&w=900",
   dining:
-    "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80",
+    "https://images.pexels.com/photos/7180275/pexels-photo-7180275.jpeg?auto=compress&cs=tinysrgb&w=900",
   lobby:
-    "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+    "https://images.pexels.com/photos/31338029/pexels-photo-31338029.jpeg?auto=compress&cs=tinysrgb&w=900",
   storage:
-    "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80",
+    "https://images.pexels.com/photos/6585750/pexels-photo-6585750.jpeg?auto=compress&cs=tinysrgb&w=900",
   office:
-    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+    "https://images.pexels.com/photos/31726545/pexels-photo-31726545.jpeg?auto=compress&cs=tinysrgb&w=900",
   bride:
-    "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "https://images.pexels.com/photos/8141958/pexels-photo-8141958.jpeg?auto=compress&cs=tinysrgb&w=900",
   custom:
-    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+    "https://images.pexels.com/photos/7533842/pexels-photo-7533842.jpeg?auto=compress&cs=tinysrgb&w=900",
 };

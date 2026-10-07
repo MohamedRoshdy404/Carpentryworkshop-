@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState, type FormEvent } from "react";
 import type { User } from "@supabase/supabase-js";
 import { Link } from "react-router-dom";
-import { categories } from "../data/products";
+import { categories, normalizeProductCategory } from "../data/products";
 import { useProductCatalog } from "../contexts/useProductCatalog";
 import type { Product, ProductAvailability, ProductImage } from "../types/product";
 import { isSupabaseConfigured, supabase } from "../services/supabase";
@@ -87,6 +87,7 @@ export function AdminPage() {
         ...(row.product as Omit<Product, "id">),
         id: Number(row.id),
         published: row.is_published,
+        category: normalizeProductCategory(row.product.category),
       })),
     );
   }, []);
@@ -413,9 +414,13 @@ export function AdminPage() {
             <Field label="وصف قصير" value={form.shortDescription} onChange={(value) => setForm({ ...form, shortDescription: value })} />
             <TextArea label="الوصف الكامل" value={form.description} onChange={(value) => setForm({ ...form, description: value })} />
             <label className="block text-sm font-medium text-stone-700">
-              صور المنتج {editingId && form.images.length ? "(اختر صورًا جديدة لاستبدال الحالية)" : ""}
+              صور المنتج (يمكن اختيار عدة صور لنفس القطعة من زوايا مختلفة)
+              {editingId && form.images.length ? " — استبدال الصور الحالية" : ""}
               <input type="file" accept="image/*" multiple onChange={(event) => setSelectedImages(Array.from(event.target.files ?? []))} className="mt-2 block w-full text-sm file:ml-3 file:rounded-full file:border-0 file:bg-stone-100 file:px-4 file:py-2" />
             </label>
+            <p className="text-xs leading-5 text-stone-500">
+              ارفع صورًا حقيقية لنفس القطعة من الأمام والجنب والتفاصيل. الصور الحالية ستُستبدل عند اختيار صور جديدة.
+            </p>
             {form.images.length ? (
               <p className="text-xs text-stone-500">الصور الحالية: {form.images.length}</p>
             ) : null}
