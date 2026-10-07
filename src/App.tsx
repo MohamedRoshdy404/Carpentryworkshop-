@@ -104,9 +104,15 @@ function App() {
   return (
     <ProductCatalogProvider>
       <div dir="rtl" className="min-h-screen bg-[#f7f1ea] text-stone-800">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:right-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:text-stone-900 focus:shadow-lg"
+        >
+          انتقل إلى المحتوى الرئيسي
+        </a>
         <RouteMetadata />
         <Navbar />
-        <main>
+        <main id="main-content" tabIndex={-1}>
           <CatalogConnectionNotice />
           <Suspense
             fallback={

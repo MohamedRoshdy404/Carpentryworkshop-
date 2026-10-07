@@ -63,7 +63,7 @@ export function Navbar() {
           type="button"
           onClick={() => setIsOpen((current) => !current)}
           className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-300 bg-white text-stone-800 md:hidden"
-          aria-label="فتح القائمة"
+          aria-label={isOpen ? "إغلاق القائمة" : "فتح القائمة"}
           aria-expanded={isOpen}
           aria-controls="mobile-navigation"
         >

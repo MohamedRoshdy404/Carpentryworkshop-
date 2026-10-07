@@ -1,6 +1,5 @@
 import { products } from "../data/products";
 import type { Product } from "../types/product";
-import { supabase } from "./supabase";
 
 export const getProducts = (): Product[] => [...products];
 
@@ -43,6 +42,14 @@ type ProductRecord = {
 };
 
 export async function fetchAdditionalProducts(): Promise<Product[]> {
+  if (
+    !import.meta.env.VITE_SUPABASE_URL ||
+    !import.meta.env.VITE_SUPABASE_ANON_KEY
+  ) {
+    return [];
+  }
+
+  const { supabase } = await import("./supabase");
   if (!supabase) return [];
 
   const { data, error } = await supabase

@@ -101,9 +101,12 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .product-lightbox-backdrop,
-  .product-lightbox-panel,
-  .product-lightbox-image {
-    animation-duration: 1ms;
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

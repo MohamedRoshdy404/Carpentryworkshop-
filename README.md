@@ -58,9 +58,12 @@ npm.cmd run dev
 
 ```powershell
 npm run lint
+npm test
 npm run build
 npm run preview
 ```
+
+تعمل اختبارات الوحدات باستخدام `npm test`. ويتحقق سير GitHub Actions من lint والاختبارات والبناء عند فتح طلب دمج إلى `main` أو `master`.
 
 ### النشر المجاني على GitHub Pages
 
